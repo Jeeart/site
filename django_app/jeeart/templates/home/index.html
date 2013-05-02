@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_home.css" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/flexslider.css" />
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <ul id="nav">
+        <li class="current"><a href="/">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="/blog">BLOG</a></li>
+        <li><a href="/dispic">DISPIC</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block page_content %}
+    <div id="content">
+        <div id="gallery">
+            <div class="gallery-scr flexslider">
+                <ul class="slides">
+                    {% for banner in banners %}
+                    <li><a href="{{banner.link}}"><img alt="{{banner.title}}" src="{{MEDIA_URL}}{{banner.image}}" /></a></li>    
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <a href="#" class="gallery-left-btn hide"><span></span></a>
+            <a href="#" class="gallery-right-btn hide"><span></span></a>
+        </div>
+        
+        <div id="shortcut-list">
+            <!--
+            <ul>
+                <li><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
+                <li><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
+                <li class="no-mg"><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
+            </ul>
+            -->
+            {% for page in grouplists %}
+            {% if forloop.first %}
+            <ul class="current">
+            {% else %}
+            <ul>
+            {% endif %}
+                {% for demo in page %}
+                    {% if forloop.counter|divisibleby:3 %}
+                    <li class="no-mg"><a href="{{demo.link}}"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                    {% else %}  
+                    <li><a href="{{demo.link}}"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+        
+        <div class="shortcut-ctrl">
+            <ul>
+                {% for page in grouplists %}
+                    {% if forloop.first %}
+                    <li class="current"><a href="#"></a></li>
+                    {% else %}
+                    <li><a href="#"></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div id="about" class="aboutus">
+        <ul>
+            <li>
+                <a href="#"><img src="{{MEDIA_URL}}images/icon/local.png" /></a>
+                <p class="ab-tit">CHENDU</p>
+                <p class="ab-desc">JEE是一个成长中的小团队<br/>在成都，爱成都</p>
+            </li>
+            <li>
+                <a href="#"><img src="{{MEDIA_URL}}images/icon/dribbble.png" /></a>
+                <p class="ab-tit">DRIBBBLE</p>
+                <p class="ab-desc">来看看我们最近的作品吧<br/>建议和赞美都欢迎</p>
+            </li>
+            <li class="aboutus-nomg">
+                <a href="#"><img src="{{MEDIA_URL}}images/icon/email.png" /></a>
+                <p class="ab-tit">GET IN TOUCH</p>
+                <p class="ab-desc">交流建议还是分享新知？<br/>别等了，勾兑起来</p>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="{{MEDIA_URL}}js/jquery-1.9.1.min.js"></script>
+    <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js"></script>
+ 
+{% endblock %}

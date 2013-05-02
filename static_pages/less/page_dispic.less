@@ -1,0 +1,162 @@
+/*page_dispic.less*/
+@import "reset.less";
+@import "func.less";
+
+body {
+	background: url(../images/dispic/bg.png);
+	font-size: 14px;
+	font-family: Montserrat, Verdana, Helvetica, Helvetica Neue, Microsoft Yahei, Arial;
+}
+.wrapper {
+	width:1100px;
+	margin: 0 auto;
+}
+#header {
+	background: #233c22;
+	color:#79b272;
+	height: 50px;
+	position: relative;
+	border-bottom: 1px solid #1a1a1a;
+
+	h1 {
+		text-align: center;
+		font-size: 18px;
+		line-height:50px;
+        font-weight: 600;
+	}
+
+	.back2jee {
+		color: #79b272;
+		width: 90px;
+		text-align: center;
+		text-decoration: none;
+		border-right: 1px solid #1a221b;
+		position: absolute;
+		left:0;
+		top:0;
+		font-size: 14px;
+		line-height: 50px;
+        
+        &:hover {
+            background: #3B5A3C; 
+        }
+        &:active {
+            background: #1D391F;
+        }
+	}
+}
+
+.banner {
+    position:relative;
+    
+    .banner-con {
+        position:absolute;
+        width: 100%;
+        top: 226px;
+        
+        text-align: center;
+        font-size: 20px;
+        line-height: 48px;
+        color:#C8E4DB;
+    }
+    
+    .text { margin-bottom: 22px; }
+}
+
+.intro {
+    border-left: 1px solid #CACACA;
+    border-right: 1px solid #CACACA;
+    border-bottom: 1px solid #CACACA;
+    background: #F4F4F4;
+    padding: 60px 0 128px 0;
+    text-align: center;
+    
+    h2 {
+        font-size: 30px;
+        color: #2E6429;
+        margin-bottom: 28px;
+        font-weight: 600;
+    }
+    
+    .intro-con {
+        line-height: 1.8;
+        font-size: 16px;
+        color: #494949;
+        padding: 0 185px;
+        margin-bottom: 40px;
+        
+    }
+}
+
+.about {
+    padding: 80px 80px 120px 80px;
+    background: #eee;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #494949;
+    
+    border-left: 1px solid #CACACA;
+    border-right: 1px solid #CACACA;
+    border-bottom: 1px solid #CACACA;
+    
+    h2 {
+        font-size: 30px;
+        color: #2E6429;
+        margin-bottom: 14px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .about-con {
+        margin-bottom: 30px;
+    }
+    
+    .btn-wrapper {
+        text-align: center;
+        
+        .d-btn.blue {
+            margin-right: 18px;
+        }
+    }
+}
+
+#footer {
+    text-align: center;
+    color: #8C8C8C;
+    padding: 24px 0 160px;
+}
+
+/* conpoments */
+.d-btn {
+    display: inline-block;
+    width: 158px;
+    height: 52px;
+    color: #E8F2E7;
+    font-size: 16px;
+    text-align: center;
+    line-height: 52px;
+    .border-radius(2px);
+    text-shadow: 1px 1px 0 #888;
+    
+    &.green {
+        background: #68A861;
+        
+        &:hover {
+            background: #77B970;
+        }
+        &:active {
+            background: #5D9B56;
+        }
+    }
+    
+    &.blue {
+        background: #7096B9;
+        
+        &:hover {
+            background: #8CAFCF;
+        }
+        &:active {
+            background: #678CAD;
+        }
+    }
+}

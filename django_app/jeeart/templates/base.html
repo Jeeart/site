@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jeeart</title>
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"  />-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+    
+    {% block css_link %} {% endblock %}
+    
+</head>
+
+<body>
+    <div class="wrapper">
+    <header>
+        <div id="header">
+            {% block nav %} {% endblock %}
+        </div>
+    </header>
+    
+    {% block page_content %}{% endblock %}
+    
+    <footer>
+        <div id="footer">
+            <div class="copyright">
+                <p class="cr">&copy; JEE</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

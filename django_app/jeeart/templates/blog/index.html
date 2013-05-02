@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_blog.css" />
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <ul id="nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/#about">ABOUT</a></li>
+        <li class="current"><a href="/blog">BLOG</a></li>
+        <li><a href="/dispic">DISPIC</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block page_content %}
+    <div id="blog-content">
+        <div id="posts">
+            <ul class="posts-ul">
+                {% for blog in blog_list %}
+                <li>
+                    <div class="post-hd">
+                        <h2>{{blog.title}}</h2>
+                        <span class="post-time">{{blog.last_edit_time|date:"d/n/Y"}}</span>
+                    </div>
+                    <div class="post-con">
+                        {{blog.content|safe}}
+                    </div>
+                </li>    
+                {% endfor %}    
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}

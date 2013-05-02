@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_dispic_coming.css" />
+{% endblock %}
+
+{% block nav %}
+<h1>DISPIC</h1>
+<a class="back2jee" href="/" >Jee</a>
+{% endblock %}
+
+{% block page_content %}
+<div id="dispic-coming">
+	<h2 id="coming-logo">DISPIC</h1>
+    <p class="c-text">喜欢instagram或dribbble并希望它们同时出现在Mac上？</p>
+    
+    <div class="form-wrapper">
+        <form id="email-form">
+        <input type="text" name="email" id="email-input" placeholder="输入邮箱获取最新信息" />
+        <input type="submit" name="submit" id="email-submit" value="提交" />
+        </form>
+        
+        <p id="submit-info">谢谢关注 :)</p>
+    </div>
+</div>
+
+<script src="{{MEDIA_URL}}js/jquery-1.9.1.min.js"></script>
+<script>
+    $(function () {
+        var $wrapper = $('.wrapper'),
+            $input = $('#email-input'),
+            $submit = $('#email-submit'),
+            $submitInfo = $('#submit-info'),
+            $form = $('#email-form'),
+            STR_EMAIL_INVALIDE = '邮箱格式错误 :(';
+            STR_EMAIL_EXISTED = '此邮箱已存在, 谢谢关注 :)';
+
+        function validate_email(email){
+             return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email));
+        }
+        
+        function show_succ (con) {
+            con = con || '谢谢关注 :)';
+            $submitInfo.removeClass('err').addClass('succ').html(con).show();
+        }
+        function show_err(msg, time) {
+            $submitInfo.removeClass('succ').addClass('err').html(msg).show();
+            if (!!time && time > 0) {
+                clearTimeout($submitInfo._timer);
+                $submitInfo._timer = setTimeout(function () {
+                    $submitInfo.hide();
+                }, time);
+            }
+        }
+        
+        $form.submit(function (e) {
+            e.preventDefault();
+            
+            var em = $.trim($input.val());
+            if (validate_email(em)) {
+                $.post('/cgi/dispic/submit_email', {
+                    'email': em
+                }, function (o) {
+                    //console.log(o);
+                    if (o) {
+                        if (o.retcode == 0) {
+                            show_succ();
+                        } else if (/existed/ig.test(o.err_msg)) {
+                            show_succ(STR_EMAIL_EXISTED);
+                        } else {
+                            show_err(STR_EMAIL_INVALIDE, 1000);
+                        }
+                    }
+                });
+            } else { 
+                show_err(STR_EMAIL_INVALIDE, 1000);
+            }
+            
+            return false;
+        });
+
+    });
+</script>
+
+{% endblock %}

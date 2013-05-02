@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_dispic.css" />
+{% endblock %}
+
+{% block nav %}
+<h1>DISPIC</h1>
+<a class="back2jee" href="/" >Jee</a>
+{% endblock %}
+
+{% block page_content %}
+<div id="dispic-content">
+	<div class="banner">
+		<img class="banner-img" alt="" src="{{MEDIA_URL}}images/dispic/banner.png" />
+		<div class="banner-con">
+			<p class="text">喜欢dribbble或instagram并希望他们同时出现在Mac上？</p>
+			<a class="d-btn green" href="/dispic/download">立即下载</a>
+		</div>
+	</div>
+
+	<div class="intro">
+		<h2>简洁，易用的小工具</h2>
+		<p class="intro-con">Dispic 是一款运行在Mac上的app，它能方便的集合dribbble和instagram，如果你也是这两款应用的爱好者，试用一下Dispic，相信你会喜欢上它。</p>
+        <p class="intro-img">
+            <img alt="" src="{{MEDIA_URL}}images/dispic/ig_db.png" />
+        </p>
+	</div>
+
+	<div class="about">
+		<h2>关于&花絮</h2>
+		<p class="about-con">Dispic是Jee Studio的试验性产品之一，最初的想法萌生于2011年底，在不断的迭代与思考中，产品的最初想法和最终呈现相去甚远。Dispic由一个设计师及一个工程师用业余时间完成，过程中我们低估了Mac开发难度，在其中也遇到了颇多的困难，所幸的是我们坚持下来了并成功发布了第一个版本。<br/>
+			最初的版本中会有很多不如人意的地方，我们会尽可能的快的修改，也欢迎大家给我们意见。</p>
+		<div class="btn-wrapper">
+			<a class="d-btn blue" href="mailto:contact@jeeart.com">联系我们</a>
+			<a class="d-btn green" href="/dispic/download">免费下载</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

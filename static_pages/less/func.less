@@ -1,0 +1,100 @@
+/*Background Color*/
+@bg-base-color:#fff;
+@bg-dark-color:#333;
+@bg-gray-color:#f5f5f5;
+
+/*Border*/
+@border-base-color:#eaeaea;
+
+/*Text Color*/
+@text-base-color:#333;
+@text-highlight-color:#f40;
+@text-bright-color:#999;
+@text-link-color:#367ec7;
+@text-hover-color:#555;
+@text-active-color:#f40;
+
+/*Text size*/
+@text-base-size:14px;
+@text-large-size:18px;
+@text-largeX-size:22px;
+@text-small-size:12px;
+
+/*Space*/
+@base-space-width:10px;
+
+/*Screen size*/
+@screen-width:100%;
+
+
+
+@p: @base-space-width;
+/*正方形*/
+.squared (@edge: 10px) {
+    width: @edge;
+    height: @edge;
+}
+
+/*三角形*/
+.triangle (@color: #53637b, @edge: 8px) {
+	border-color:  transparent  transparent @color ;
+	border-style: solid;
+	border-width: @edge;
+}
+
+/*圆角*/
+.border-radius (@radius: 5px){
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+/*阴影*/
+.box-shadow-o (@x:0, @y:0, @s:10px, @c:#333) {
+    -webkit-box-shadow: @x @y @s @c;
+    -moz-box-shadow: @x @y @s @c;
+    -o-box-shadow: @x @y @s @c;
+    -ms-box-shadow: @x @y @s @c;
+    box-shadow: @x @y @s @c;
+}
+
+/*水平垂直居中*/
+.center-box (@w: 200px, @h: 140px){
+    width: @w;
+    height: @h;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+
+    img {
+        vertical-align: middle;
+        max-width: @w;
+        max-height: @h;
+        *width: @w;
+        *height: @h;
+    }
+}
+
+.opacity(@a: 0){
+    @b: @a*100;
+    filter: alpha(opacity=@b);
+    opacity: @a;
+}
+
+.transform(@prop) {
+    -webkit-transform: @prop;
+    -moz-transform: @prop;
+    -o-transform: @prop;
+    -ms-transform: @prop;
+    transform: @prop;
+}
+
+.transition(@name, @duration:0.4s, @func:linear, @delay:0s){
+    -webkit-transition: @name @duration @func @delay;
+    -moz-transition: @name @duration @func @delay;
+    -o-transition: @name @duration @func @delay;
+    -ms-transition: @name @duration @func @delay;
+    transition: @name @duration @func @delay;
+}
+

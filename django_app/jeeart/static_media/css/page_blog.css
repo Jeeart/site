@@ -1,0 +1,16 @@
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,p{margin:0;padding:0;}
+img{border:0 none;}
+ul,ol,dl{list-style:none;}
+a{text-decoration:none;}
+body{background:#F0F0F0;font-size:12px;font-family:Montserrat, Verdana, Helvetica, Helvetica Neue, Microsoft Yahei, Arial;}body a{cursor:pointer;}
+.wrapper{min-width:840px;}
+#header{background:#f9f9f9 url(../images/logo.png) no-repeat 50% 60px;height:300px;overflow:hidden;border-bottom:1px solid #D6D6D6;}
+#nav{width:650px;margin:218px auto 0;overflow:hidden;}#nav li{float:left;width:162px;overflow:hidden;text-align:center;}
+#nav li.current a{color:#444444;}
+#nav a{color:#999999;line-height:40px;font-weight:500;font-size:14px;}#nav a:hover{color:#444444;}
+#footer .copyright{padding:40px 0 300px;text-align:center;}#footer .copyright .cr{padding:30px 0 8px 0;background:url(../images/dyt2.png) 50% 0 no-repeat;color:#A5A5A5;font-fize:12px;}
+#blog-content{width:820px;margin:0 auto;}#blog-content #posts .posts-ul li{padding-top:44px;}#blog-content #posts .posts-ul li .post-hd{position:relative;margin-bottom:20px;}
+#blog-content #posts .posts-ul li h2{font-size:30px;}#blog-content #posts .posts-ul li h2 a{color:#73B9FF;}#blog-content #posts .posts-ul li h2 a:hover{color:#007FFF;}
+#blog-content #posts .posts-ul li .post-time{position:absolute;font-size:13px;right:0;color:#BBBBBB;bottom:0;}
+#blog-content #posts .posts-ul li .post-con{font-size:14px;line-height:1.6;color:#777;}#blog-content #posts .posts-ul li .post-con p{margin-bottom:16px;}
+#blog-content #posts .posts-ul li .more-link{font-size:30px;color:#73B9FF;}#blog-content #posts .posts-ul li .more-link:hover{color:#007FFF;}
