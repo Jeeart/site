@@ -1,6 +1,6 @@
 # Django settings for jeeart project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 import os
@@ -12,7 +12,7 @@ ADMINS = (
     ('hongru', 'hongru.chenhr@gmail.com'),
 )
 
-MANAGERS = ADMINS
+MANAGERS = '184.82.252.184'
 
 DATABASES = {
     'default': {
@@ -112,7 +112,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #os.path.join(CONF_ROOT,"templates"),
-    "/home/horizonchen/jeeart/site/django_app/jeeart/templates",
+    os.path.join(CONF_ROOT,"templates")
 )
 
 INSTALLED_APPS = (
