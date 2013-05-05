@@ -1,13 +1,10 @@
-#-*- coding:utf-8 -*-
-import os, sys
- 
-#Calculate the path based on the location of the WSGI script.
-apache_configuration= os.path.dirname(__file__)
-project = os.path.dirname(apache_configuration)
-workspace = os.path.dirname(project)
-sys.path.append(workspace)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'jeeart.settings'
-os.environ['PYTHON_EGG_CACHE'] = '/tmp'
- 
+# -*- coding: utf-8 -*-
+
+import os
+import sys
 import django.core.handlers.wsgi
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'jeeart.settings_server'
+app_apth = "/home/horizonchen/jeeart/site/django_app/jeeart/"
+sys.path.append(app_apth)
 application = django.core.handlers.wsgi.WSGIHandler()
