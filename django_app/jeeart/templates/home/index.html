@@ -23,7 +23,7 @@
             <div class="gallery-scr flexslider">
                 <ul class="slides">
                     {% for banner in banners %}
-                    <li><a href="{{banner.link}}"><img alt="{{banner.title}}" src="{{MEDIA_URL}}{{banner.image}}" /></a></li>    
+                    <li><a href="{{banner.link}}" target="_blank"><img alt="{{banner.title}}" src="{{MEDIA_URL}}{{banner.image}}" /></a></li>    
                     {% endfor %}
                 </ul>
             </div>
@@ -48,9 +48,9 @@
             {% endif %}
                 {% for demo in page %}
                     {% if forloop.counter|divisibleby:3 %}
-                    <li class="no-mg"><a href="{{demo.link}}"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                    <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
                     {% else %}  
-                    <li><a href="{{demo.link}}"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                    <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
