@@ -11,7 +11,7 @@ from home.models import *
 
 def index_all(request):
     banners = BannerModel.objects.filter(is_show=True).order_by("-priority")[:4]
-    demolists = Demolist.objects.filter(is_show=True).order_by("-last_edit_time").order_by("-priority")
+    demolists = Demolist.objects.filter(is_show=True).order_by("-priority", "-last_edit_time")
     
     grouplists = []
     _pages = len(demolists)/9 + 1
