@@ -1,1 +1,2 @@
 *.pyc
+django_app/jeeart/static_media/upload/*
