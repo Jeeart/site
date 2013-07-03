@@ -4,7 +4,7 @@ ul,ol,dl{list-style:none;}
 a{text-decoration:none;}
 body{background:#F0F0F0;font-size:12px;font-family:Montserrat, Verdana, Helvetica, Helvetica Neue, Microsoft Yahei, Arial;}body a{cursor:pointer;}
 .hide{display:none;}
-.wrapper{min-width:840px;}
+.wrapper{min-width:840px;background:#000}
 #header{background:#f9f9f9 url(../images/logo.png) no-repeat 50% 60px;height:300px;overflow:hidden;border-bottom:1px solid #D6D6D6;}
 #nav{width:650px;margin:218px auto 0;overflow:hidden;}#nav li{float:left;width:162px;overflow:hidden;text-align:center;}
 #nav li.current a{color:#444444;}

@@ -1,3 +1,4 @@
 *.pyc
+/**/*.pyc
 django_app/jeeart/static_media/upload/*
 django_app/**/*.db
