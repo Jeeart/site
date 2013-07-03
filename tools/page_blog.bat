@@ -1,0 +1,1 @@
+lessc -x ../static_pages/less/page_blog.less > ../django_app/jeeart/static_media/css/page_blog.css

@@ -2,19 +2,20 @@ body,h1,h2,h3,h4,h5,h6,ul,ol,dl,p{margin:0;padding:0;}
 img{border:0 none;}
 ul,ol,dl{list-style:none;}
 a{text-decoration:none;}
-body{background:url(../images/dispic/bg.png);font-size:14px;font-family:Montserrat, Verdana, Helvetica, Helvetica Neue, Microsoft Yahei, Arial;}
+#footer .copyright{padding:40px 0 60px;text-align:center;}#footer .copyright .cr{padding:30px 0 8px 0;background:url(../images/dyt2.png) 50% 0 no-repeat;color:#A5A5A5;font-fize:12px;}
+body{background:url(../images/dispic/bg.png);font-size:14px;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",Microsoft Yahei,Arial;}
 .wrapper{width:1100px;margin:0 auto;}
 #header{background:#233c22;color:#79b272;height:50px;position:relative;border-bottom:1px solid #1a1a1a;}#header h1{text-align:center;font-size:18px;line-height:50px;font-weight:600;}
 #header .back2jee{color:#79b272;width:90px;text-align:center;text-decoration:none;border-right:1px solid #1a221b;position:absolute;left:0;top:0;font-size:14px;line-height:50px;}#header .back2jee:hover{background:#3B5A3C;}
 #header .back2jee:active{background:#1D391F;}
 .banner{position:relative;}.banner .banner-con{position:absolute;width:100%;top:226px;text-align:center;font-size:20px;line-height:48px;color:#C8E4DB;}
 .banner .text{margin-bottom:22px;}
+.banner img{display:block;}
 .intro{border-left:1px solid #CACACA;border-right:1px solid #CACACA;border-bottom:1px solid #CACACA;background:#F4F4F4;padding:60px 0 128px 0;text-align:center;}.intro h2{font-size:30px;color:#2E6429;margin-bottom:28px;font-weight:600;}
 .intro .intro-con{line-height:1.8;font-size:16px;color:#494949;padding:0 185px;margin-bottom:40px;}
 .about{padding:80px 80px 120px 80px;background:#eee;line-height:1.8;font-size:16px;color:#494949;border-left:1px solid #CACACA;border-right:1px solid #CACACA;border-bottom:1px solid #CACACA;}.about h2{font-size:30px;color:#2E6429;margin-bottom:14px;font-weight:600;text-align:center;}
 .about .about-con{margin-bottom:30px;}
 .about .btn-wrapper{text-align:center;}.about .btn-wrapper .d-btn.blue{margin-right:18px;}
-#footer{text-align:center;color:#8C8C8C;padding:24px 0 160px;}
 .d-btn{display:inline-block;width:158px;height:52px;color:#E8F2E7;font-size:16px;text-align:center;line-height:52px;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;-ms-border-radius:2px;border-radius:2px;text-shadow:1px 1px 0 #888;}.d-btn.green{background:#68A861;}.d-btn.green:hover{background:#77B970;}
 .d-btn.green:active{background:#5D9B56;}
 .d-btn.blue{background:#7096B9;}.d-btn.blue:hover{background:#8CAFCF;}
