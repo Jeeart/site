@@ -33,28 +33,25 @@
         </div>
         
         <div id="shortcut-list">
-            <!--
-            <ul>
-                <li><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
-                <li><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
-                <li class="no-mg"><a href="#"><img alt="demo.title" src="MEDIA_URL/demo.image" /></a></li>
-            </ul>
-            -->
-            {% for page in grouplists %}
-            {% if forloop.first %}
-            <ul class="current">
-            {% else %}
-            <ul>
-            {% endif %}
-                {% for demo in page %}
-                    {% if forloop.counter|divisibleby:3 %}
-                    <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
-                    {% else %}  
-                    <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+            <div class="sl-viewport">
+                <div class="sl-con-wrapper">
+                    {% for page in grouplists %}
+                    {% if forloop.first %}
+                    <ul class="current">
+                    {% else %}
+                    <ul>
                     {% endif %}
-                {% endfor %}
-            </ul>
-            {% endfor %}
+                        {% for demo in page %}
+                            {% if forloop.counter|divisibleby:3 %}
+                            <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                            {% else %}  
+                            <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}    
+                </div>
+            </div>
         </div>
         
         <div class="shortcut-ctrl">
