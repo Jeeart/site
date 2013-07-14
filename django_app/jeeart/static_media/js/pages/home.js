@@ -50,6 +50,8 @@
             sw = dom.$listVP.width();
             
         dom.$listCW.width(uln*sw);
+
+        $('.shortcut-ctrl').slideDown();
     }
 
 	function __init () {
