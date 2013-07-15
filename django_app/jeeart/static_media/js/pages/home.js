@@ -7,6 +7,8 @@
         dom.$list = $('#shortcut-list');
         dom.$listVP = dom.$list.find('.sl-viewport');
         dom.$listCW = dom.$list.find('.sl-con-wrapper');
+
+        dom.$nav = $('#nav');
 	}
 
 	function _bind () { 
@@ -25,6 +27,22 @@
 			dom.$ctrls.removeClass('current');
 			$(this).parents('li').addClass('current');
 		});
+
+		dom.$nav.delegate('a', 'click', function (e) {
+			//console.log(e.target);
+			var tar = e.target,
+				$tar = $(tar),
+				href = $tar.attr('href');
+			if (/^#/.test(href)) {
+				e.preventDefault();
+				var $d = $(href),
+					_t = $d.position().top;
+				$('html,body').animate({
+					scrollTop: _t
+				})
+			}
+		});
+
 	}
     
     function _setupList () {
@@ -32,6 +50,8 @@
             sw = dom.$listVP.width();
             
         dom.$listCW.width(uln*sw);
+
+        $('.shortcut-ctrl').slideDown();
     }
 
 	function __init () {

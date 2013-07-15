@@ -2,7 +2,7 @@
 {% load url from future %}
 
 {% block css_link %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/page_home.css" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_home.css?t=130714" />
 <link rel="stylesheet" href="{{MEDIA_URL}}css/flexslider.css" />
 {% endblock %}
 
@@ -54,7 +54,7 @@
             </div>
         </div>
         
-        <div class="shortcut-ctrl">
+        <div class="shortcut-ctrl" style="display:none">
             <ul>
                 {% for page in grouplists %}
                     {% if forloop.first %}
@@ -89,6 +89,6 @@
     
     <script src="{{MEDIA_URL}}js/jquery-1.9.1.min.js"></script>
     <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js?t=130714"></script>
  
 {% endblock %}
