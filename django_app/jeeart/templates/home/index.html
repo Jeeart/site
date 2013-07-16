@@ -43,9 +43,9 @@
                     {% endif %}
                         {% for demo in page %}
                             {% if forloop.counter|divisibleby:3 %}
-                            <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                            <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-src="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
                             {% else %}  
-                            <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" src="{{MEDIA_URL}}{{demo.image}}" /></a></li>
+                            <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-src="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>

@@ -53,11 +53,16 @@
 
         $('.shortcut-ctrl').slideDown();
     }
+    
+    function _lazyHome () {
+        
+    }
 
 	function __init () {
 		_getDom();
         _setupList();
 		_bind();
+        _lazyHome();
 
 		//init gallery
 		$('.gallery-scr').flexslider({
