@@ -32,7 +32,7 @@
             <a href="#" class="gallery-right-btn hide"><span></span></a>
         </div>
         
-        <div id="shortcut-list">
+        <div id="shortcut-list" class="lazy">
             <div class="sl-viewport">
                 <div class="sl-con-wrapper">
                     {% for page in grouplists %}
@@ -43,9 +43,9 @@
                     {% endif %}
                         {% for demo in page %}
                             {% if forloop.counter|divisibleby:3 %}
-                            <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-src="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
+                            <li class="no-mg"><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-original="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
                             {% else %}  
-                            <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-src="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
+                            <li><a href="{{demo.link}}" target="_blank"><img alt="{{demo.title}}" data-original="{{MEDIA_URL}}{{demo.image}}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=" /></a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>
@@ -67,7 +67,7 @@
         </div>
     </div>
     
-    <div id="about" class="aboutus">
+    <div id="about" class="aboutus lazy">
         <ul>
             <li>
                 <a href="#"><img src="{{MEDIA_URL}}images/icon/local.png" /></a>
@@ -89,6 +89,7 @@
     
     <script src="{{MEDIA_URL}}js/jquery-1.9.1.min.js"></script>
     <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
+    <script src="{{MEDIA_URL}}js/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js?t=130714"></script>
  
 {% endblock %}

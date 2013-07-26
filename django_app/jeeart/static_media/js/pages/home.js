@@ -53,15 +53,26 @@
 
         $('.shortcut-ctrl').slideDown();
     }
+
+    function _getWorksList () {
+        $.get('/cgi/home/getWorksList', {
+            s:9,
+            n:9
+        }, function (data) {
+            console.log(data);
+        })
+
+    }
     
     function _lazyHome () {
-        
+        $('.lazy img').lazyload();
     }
 
 	function __init () {
 		_getDom();
         _setupList();
 		_bind();
+        //_getWorksList();
         _lazyHome();
 
 		//init gallery

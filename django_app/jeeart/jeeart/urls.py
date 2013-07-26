@@ -36,6 +36,7 @@ urlpatterns = patterns('',
     
     #ajax cgi
     url(r'^cgi/dispic/submit_email', 'dispic.views.submitEmail'),
+    url(r'^cgi/home/getWorksList', 'home.views.getWorksList'),
 )
 
 #if True:
