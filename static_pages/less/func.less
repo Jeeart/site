@@ -98,3 +98,10 @@
     transition: @name @duration @func @delay;
 }
 
+.animation(@name, @durtion:1s, @iterations:1) {
+    -webkit-animation: @name @durtion @iterations; /* Safari 4+ */
+    -moz-animation:    @name @durtion @iterations; /* Fx 5+ */
+    -o-animation:      @name @durtion @iterations; /* Opera 12+ */
+    animation:         @name @durtion @iterations; /* IE 10+ */
+}
+

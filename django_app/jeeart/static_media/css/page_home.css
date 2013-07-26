@@ -5,8 +5,11 @@ a{text-decoration:none;}
 body{background:#F0F0F0;font-size:12px;font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",Microsoft Yahei,Arial;}body a{cursor:pointer;}
 .hide{display:none;}
 .wrapper{min-width:840px;}
-#header{background:#f9f9f9 url(../images/logo.png) no-repeat 50% 60px;height:300px;overflow:hidden;border-bottom:1px solid #D6D6D6;position:relative;}#header .logo-link{position:absolute;width:106px;height:106px;left:50%;margin-left:-53px;top:60px;}
-#nav{width:650px;margin:218px auto 0;overflow:hidden;}#nav li{float:left;width:162px;overflow:hidden;text-align:center;}
+@-webkit-keyframes logo{0%{width:8px;height:8px;} 71%{width:120px;height:120px;} 100%{width:104px;height:104px;}}@-moz-keyframes logo{0%{width:8px;height:8px;} 71%{width:120px;height:120px;} 100%{width:104px;height:104px;}}@-o-keyframes logo{0%{width:8px;height:8px;} 71%{width:120px;height:120px;} 100%{width:104px;height:104px;}}@keyframes logo{0%{width:8px;height:8px;} 71%{width:120px;height:120px;} 100%{width:104px;height:104px;}}#header{height:300px;overflow:hidden;border-bottom:1px solid #D6D6D6;background-color:#F9F9F9;position:relative;}#header .logo-wrapper{height:224px;overflow:hidden;}
+#header .logo-link{display:block;margin:60px auto 0 auto;width:104px;height:104px;overflow:hidden;}#header .logo-link img{display:block;width:100%;}
+.cssanimations #header .logo-wrapper{display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
+.cssanimations #header .logo-link{-webkit-animation:logo 0.7s 1;-moz-animation:logo 0.7s 1;-o-animation:logo 0.7s 1;animation:logo 0.7s 1;margin:0;}
+#nav{width:650px;margin:0px auto 0;overflow:hidden;}#nav li{float:left;width:162px;overflow:hidden;text-align:center;}
 #nav li.current a{color:#444444;}
 #nav a{color:#999999;line-height:40px;font-weight:500;font-size:14px;}#nav a:hover{color:#444444;}
 #footer .copyright{padding:40px 0 60px;text-align:center;}#footer .copyright .cr{padding:30px 0 8px 0;background:url(../images/dyt2.png) 50% 0 no-repeat;color:#A5A5A5;font-fize:12px;}
@@ -26,3 +29,9 @@ body{background:#F0F0F0;font-size:12px;font-family:"ff-tisa-web-pro-1","ff-tisa-
 .aboutus{background:#E1E1E1;border-top:1px solid #CFCFCF;border-bottom:1px solid #CBCBCB;height:330px;}.aboutus ul{width:820px;margin:0 auto;overflow:hidden;}.aboutus ul li{font-size:14px;line-height:1.8;float:left;width:260px;padding-top:76px;text-align:center;margin-right:20px;}.aboutus ul li.aboutus-nomg{margin-right:0;}
 .aboutus ul .ab-tit{color:#333333;}
 .aboutus ul .ab-desc{color:#888888;}
+.csstransitions #nav li{opacity:0;}
+.csstransitions #nav li:nth-child(1){-webkit-transition:opacity 0.5s ease-out 0.4s;-moz-transition:opacity 0.5s ease-out 0.4s;-o-transition:opacity 0.5s ease-out 0.4s;-ms-transition:opacity 0.5s ease-out 0.4s;transition:opacity 0.5s ease-out 0.4s;}
+.csstransitions #nav li:nth-child(2){-webkit-transition:opacity 0.5s ease-out 0.6s;-moz-transition:opacity 0.5s ease-out 0.6s;-o-transition:opacity 0.5s ease-out 0.6s;-ms-transition:opacity 0.5s ease-out 0.6s;transition:opacity 0.5s ease-out 0.6s;}
+.csstransitions #nav li:nth-child(3){-webkit-transition:opacity 0.5s ease-out 0.8s;-moz-transition:opacity 0.5s ease-out 0.8s;-o-transition:opacity 0.5s ease-out 0.8s;-ms-transition:opacity 0.5s ease-out 0.8s;transition:opacity 0.5s ease-out 0.8s;}
+.csstransitions #nav li:nth-child(4){-webkit-transition:opacity 0.5s ease-out 1s;-moz-transition:opacity 0.5s ease-out 1s;-o-transition:opacity 0.5s ease-out 1s;-ms-transition:opacity 0.5s ease-out 1s;transition:opacity 0.5s ease-out 1s;}
+.csstransitions #nav.show li{opacity:1;}

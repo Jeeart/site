@@ -68,12 +68,19 @@
         $('.lazy img').lazyload();
     }
 
+    function _startAnim () {
+        if (Modernizr.csstransitions) {
+            dom.$nav.addClass('show');
+        }
+    }
+
 	function __init () {
 		_getDom();
         _setupList();
 		_bind();
         //_getWorksList();
         _lazyHome();
+        _startAnim();
 
 		//init gallery
 		$('.gallery-scr').flexslider({

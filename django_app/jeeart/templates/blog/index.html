@@ -2,10 +2,11 @@
 {% load url from future %}
 
 {% block css_link %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/page_blog.css" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_blog.css?t=130726" />
 {% endblock %}
 
 {% block nav %}
+<div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo.png" /></a></div>
 <nav>
     <ul id="nav">
         <li><a href="/">HOME</a></li>
@@ -13,7 +14,6 @@
         <li class="current"><a href="/blog">BLOG</a></li>
         <li><a href="/dispic">DISPIC</a></li>
     </ul>
-    <a href="/" class="logo-link"></a>
 </nav>
 {% endblock %}
 

@@ -2,11 +2,12 @@
 {% load url from future %}
 
 {% block css_link %}
-<link rel="stylesheet" href="{{MEDIA_URL}}css/page_home.css?t=130714" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/page_home.css?t=130726" />
 <link rel="stylesheet" href="{{MEDIA_URL}}css/flexslider.css" />
 {% endblock %}
 
 {% block nav %}
+<div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo.png" /></a></div>
 <nav>
     <ul id="nav">
         <li class="current"><a href="/">HOME</a></li>
@@ -87,7 +88,7 @@
         </ul>
     </div>
     
-    <script src="{{MEDIA_URL}}js/jquery-1.9.1.min.js"></script>
+
     <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
     <script src="{{MEDIA_URL}}js/jquery.lazyload.min.js"></script>
     <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js?t=130726"></script>
