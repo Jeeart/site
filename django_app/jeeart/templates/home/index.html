@@ -10,9 +10,9 @@
 <div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo.png" /></a></div>
 <nav>
     <ul id="nav">
-        <li class="current"><a href="/">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="/blog">BLOG</a></li>
+        <!--<li class="current"><a href="/">HOME</a></li>-->
+        <li><a href="#hi">我们</a></li>
+        <li><a href="/blog">博客</a></li>
         <li><a href="/dispic">DISPIC</a></li>
     </ul>
 </nav>
@@ -66,8 +66,47 @@
                 {% endfor %}
             </ul>
         </div>
+
+        <div id="hi" class="sayhi">
+            <h4>Hi</h4>
+            ONG Studio 是一个专注于图形界面和前端技术的小团队
+        </div>
+        <div class="skytext">
+            <img alt="" src="{{MEDIA_URL}}images/sky.jpg" />
+            <p>
+                一切正在发生，<br/>
+越来越多的案例正在证明 - 良好的用户体验已成为成功产品的要素之一。<br/>
+ONG Studio的成员在2011年怀着对设计的热情以及互联网文化的信仰，组建了这个令人兴奋的小团队。<br/>
+在互联网飞速进化的几年中，我们见证了整个行业从Web到Mobile的进化并有幸参与了部分产品的设计。<br/>
+<br/>
+我们总是希望创造些什么，<br/>
+这短暂的几年中，在对专业技艺不断磨练的同时我们也希望在产品创造上有所发挥。<br/>
+很幸运，我们能够跟那些富有激情的天才工程师们合作，使得 Stash，Dispic 等小众产品得以诞生。<br/>
+很感恩，我们正在做自己喜欢的事并将一直持续。<br/>
+            </p>
+        </div>
+        <div class="welove">
+            <h4>We Love</h4>
+            <ul>
+                <li class="game"></li>
+                <li class="design"></li>
+                <li class="photograph"></li>
+                <li class="coding"></li>
+            </ul>
+        </div>
+        <div class="partner">
+            <h4>We Partner With</h4>
+            <ul>
+                <li class="newegg"></li>
+                <li class="etao"></li>
+                <li class="ali"></li>
+                <li class="tencent"></li>
+                <li class="ms"></li>
+                <li class="lenovo"></li>
+            </ul>
+        </div>
     </div>
-    
+    <!--
     <div id="about" class="aboutus lazy">
         <ul>
             <li>
@@ -87,7 +126,7 @@
             </li>
         </ul>
     </div>
-    
+    -->
 
     <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
     <script src="{{MEDIA_URL}}js/jquery.lazyload.min.js"></script>

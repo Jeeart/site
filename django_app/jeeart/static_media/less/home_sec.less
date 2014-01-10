@@ -1,0 +1,330 @@
+
+#content {
+    width: 820px;
+    background: #333739;
+    padding: 20px;
+    border-left: 1px solid #333;
+    float: right;
+}
+#gallery {
+    position: relative;
+    background: #28292c;
+    
+    //border-left: 1px solid #CFCFCF;
+    //border-right: 1px solid #CFCFCF;
+    //border-bottom: 1px solid #ABABAB;
+    margin-bottom: 50px;
+    
+    //.box-shadow-o(0, 1px, 1px, #ccc);
+    //.border-radius(3px);
+    
+    .gallery-scr {
+        width: 800px;
+        height: 480px;
+        padding: 10px 0;
+        margin: 0 auto;
+        
+        img {
+            width: 800px;
+            height: 480px;
+        }
+    }
+    
+    .gallery-left-btn, .gallery-right-btn {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        text-align: center;
+        top: 50%;
+        margin-top: -17px;
+        
+        span {
+            width:7px;
+            height: 13px;
+            position: absolute;
+            left:50%;
+            top: 50%;
+            margin-left: -4px;
+            margin-top: -6px;
+            background-image: url(../images/icon/arrow_grey.png);
+            background-repeat: no-repeat;
+        }
+        
+        &:hover {
+            background: url(../images/bg/arrow.png) 50% 50% no-repeat;
+            span {
+                background-image: url(../images/icon/arr.png);
+            }
+        }
+    }
+    
+    .gallery-left-btn {
+        left: -56px;
+        span {
+            background-position: 0 0;
+        }
+    }
+    .gallery-right-btn {
+        right: -56px;
+        span {
+            background-position: 0 -14px;
+            margin-left: -3px;
+        }
+    }
+}
+
+#shortcut-list {
+    .sl-viewport {
+        overflow: hidden;
+        position: relative;
+        width: 820px;
+        height: 660px;
+    }
+    .sl-con-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    overflow:hidden;
+    ul {
+        overflow: hidden; zoom:1; float: left;
+        width: 820px;
+    }
+
+    
+    li {
+        background: #28292c url(../images/icon/loading.gif) no-repeat 50% 50%;
+        width: 240px;
+        height: 180px;
+        padding: 9px;
+        border-width:1px;
+        border-style: solid;
+        border-color: #28292c;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        
+        //.box-shadow-o(0, 1px, 1px, #ccc);
+        //.border-radius(3px);
+        
+        img {
+            width: 240px;
+            height: 180px;
+        }
+        
+        &.no-mg {
+            margin-right: 0;
+        }
+    }
+}
+
+.shortcut-ctrl {
+    text-align: center;
+    ul {
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        padding: 24px 0 46px;
+        li {
+            float: left;
+            width: 34px;
+            height: 12px;
+            
+            &.current a { background-position: top left; }
+            
+            a {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: url(../images/icon/grey-dot.png) top right no-repeat;
+                
+                &:hover {
+                    background-position: top left;
+                }
+            }
+        }
+    }
+}
+
+.aboutus {
+    clear:both;
+
+    height: 330px;
+    
+    ul {
+        width: 820px;
+        margin: 0 auto;
+        overflow: hidden;
+        
+        li {
+            font-size: 14px;
+            line-height: 1.8;
+            float: left;
+            width: 260px;
+            padding-top: 76px;
+            text-align: center;
+            
+            margin-right: 20px;
+            
+            &.aboutus-nomg {
+                margin-right: 0;
+            }
+        }
+        .ab-tit { color: #333 }
+        .ab-desc {
+            color: #888888;
+        }
+    }
+}
+
+/*css anim*/
+.csstransitions {
+    #nav li {
+        opacity: 0;
+    }
+    #nav li:nth-child(1) {
+        .transition(opacity, 0.5s, ease-out, 0.4s)
+    }
+    #nav li:nth-child(2) {
+        .transition(opacity, 0.5s, ease-out, 0.6s)
+    }
+    #nav li:nth-child(3) {
+        .transition(opacity, 0.5s, ease-out, 0.8s)
+    }
+    #nav li:nth-child(4) {
+        .transition(opacity, 0.5s, ease-out, 1.0s)
+    }
+    
+    #nav.show li {
+        opacity: 1;
+    }
+}
+
+.sayhi {
+    margin-top: 20px;
+    background: #2b2d30;
+    color: #ddd;
+    padding: 140px 0;
+    text-align: center;
+    font-size: 14px;
+
+    h4 {
+        width: 80px;
+        margin: 0 auto;
+        line-height: 40px;
+        border-bottom: 2px solid #ddd;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+
+.skytext {
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+    }
+    p {
+        position: absolute;
+        width: 700px;
+        font-size: 14px;
+        color: #fff;
+        line-height: 2.2;
+        left: 70px;
+        top: 60px;
+    }
+}
+.welove {
+    background: #2b2d30;
+    padding: 50px 0 100px 0;
+    border-bottom: 1px solid #222333;
+
+    h4 {
+        width: 120px;
+        font-size: 16px;
+        color: #ddd;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 45px;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 70px;
+    }
+
+    ul {
+        overflow: hidden;
+        zoom: 1;
+        padding: 0 38px;
+
+        li {
+            float: left;
+            width: 185px;
+            height: 108px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            &.game {
+                background-image: url(../images/love_03.png);
+            }
+            &.design {
+                background-image: url(../images/love_05.png);
+            }
+            &.photograph {
+                background-image: url(../images/love_07.png);
+            }
+            &.coding {
+                background-image: url(../images/love_09.png);
+            }
+        }
+    }
+}
+
+.partner {
+    background: #2b2d30;
+    padding: 50px 0 100px 0;
+
+    h4 {
+        width: 140px;
+        font-size: 16px;
+        color: #ddd;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 45px;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 70px;
+    }
+
+    ul {
+        overflow: hidden;
+        zoom: 1;
+        padding: 0 38px;
+
+        li {
+            float: left;
+            width: 246px;
+            height: 56px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            margin-bottom: 30px;
+
+            &.newegg {
+                background-image: url(../images/partner_03.png);
+            }
+            &.etao {
+                background-image: url(../images/partner_05.png);
+            }
+            &.ali {
+                background-image: url(../images/partner_07.png);
+            }
+            &.tencent {
+                background-image: url(../images/partner_12.png);
+            }
+            &.ms {
+                background-image: url(../images/partner_13.png);
+            }
+            &.lenovo {
+                background-image: url(../images/partner_14.png);
+            }
+        }
+    }
+}

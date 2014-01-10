@@ -1,0 +1,87 @@
+//logo animation
+@-webkit-keyframes logo {
+  0%   { width: 8px; height: 8px; }
+  71%  { width: 120px; height:120px; }
+  100% { width: 104px; height: 104px; }
+}
+@-moz-keyframes logo {
+  0%   { width: 8px; height: 8px; }
+  71%  { width: 120px; height:120px; }
+  100% { width: 104px; height: 104px; }
+}
+@-o-keyframes logo {
+  0%   { width: 8px; height: 8px; }
+  71%  { width: 120px; height:120px; }
+  100% { width: 104px; height: 104px; }
+}
+@keyframes logo {
+  0%   { width: 8px; height: 8px; }
+  71%  { width: 120px; height:120px; }
+  100% { width: 104px; height: 104px; }
+}
+
+#header{
+    width: 300px;
+    float: left;
+    overflow:hidden;
+
+    position: relative;
+    
+    .logo-wrapper {
+        height: 224px;
+        overflow: hidden;
+    }
+    
+    .logo-link {
+        display: block;
+        margin: 60px auto 0 auto;
+        width: 104px;
+        height: 104px;
+        overflow: hidden;
+
+        img {
+            display:block;
+            width:100%;
+        }
+    }
+}
+
+.cssanimations{
+    #header {
+        .logo-wrapper {
+            display: -webkit-box;
+            -webkit-box-align: center;
+            -webkit-box-pack: center;
+        }
+        .logo-link {
+            .animation(logo, 0.7s);
+            margin: 0;
+        }    
+    }
+}
+
+#nav {
+    margin: 0px auto 0;
+    overflow: hidden;
+    
+    li {
+        
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    li.current a { color: #5b9056 }
+    
+    a {
+        color: #eee;
+        line-height: 40px;
+        font-weight: 500;
+        font-size: 14px;
+        
+        &:hover {
+            color: #5b9056;
+            text-decoration: underline;
+        }
+    }
+    
+}
