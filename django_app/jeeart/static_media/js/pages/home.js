@@ -1,5 +1,6 @@
 ;$(function () {
 	var dom = {};
+	var MIN_H = 520;
 
 	function _getDom () {
 		dom.$ctrls = $('.shortcut-ctrl li');
@@ -9,6 +10,9 @@
         dom.$listCW = dom.$list.find('.sl-con-wrapper');
 
         dom.$nav = $('#nav');
+        dom.$hd = $('#header');
+        dom.$con = $('#content');
+        dom.$gallery = $('#gallery');
 	}
 
 	function _bind () { 
@@ -43,6 +47,10 @@
 			}
 		});
 
+		$(window).on('resize', function () {
+			resize();
+		})
+
 	}
     
     function _setupList () {
@@ -65,7 +73,10 @@
     }
     
     function _lazyHome () {
-        $('.lazy img').lazyload();
+        $('.lazy img').lazyload({
+        	effect: 'fadeIn',
+        	container: $("#content")
+        });
     }
 
     function _startAnim () {
@@ -74,9 +85,57 @@
         }
     }
 
+    function resize () {
+    	$('body').addClass('ofh');
+    	var h = Math.max(MIN_H, window.innerHeight);
+    	dom.$hd.css({
+    		height: h,
+    		overflow: 'hidden',
+    		width: '29.9%'
+    	});
+    	dom.$con.css({
+    		height: h,
+    		overflow: 'auto',
+    		webkitOverflowScrolling: 'touch',
+    		float: 'right',
+    		width: (window.innerWidth*0.7 - 40)
+    	});
+
+    	dom.$gallery.find('.gallery-scr').css({
+    		width: dom.$gallery.width() - 20,
+    		height: 'auto'
+    	});
+    	dom.$gallery.find('.gallery-scr img').css({
+    		width: '100%',
+    		height: 'auto'
+    	});
+
+    	var galleryW = dom.$gallery.width();
+    	dom.$listVP.css({
+    		width: galleryW
+    	});
+    	_setupList();
+
+    	dom.$list.find('ul').css({
+    		width: galleryW
+    	});
+    	dom.$listVP.find('li').css({
+    		width: ((galleryW - 42)/3 -20)
+    	});
+    	dom.$list.find('img').css({
+    		width: '100%'
+    	});
+
+    	//resize left
+    	var l = -(dom.$list.find('ul.current').index()*dom.$listVP.width());
+        dom.$listCW.css({
+            'left': l
+        });
+    }
+
 	function __init () {
 		_getDom();
-        _setupList();
+		resize();
 		_bind();
         //_getWorksList();
         _lazyHome();
