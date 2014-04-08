@@ -1,6 +1,7 @@
 ;$(function () {
 	var dom = {};
 	var MIN_H = 520;
+    var MAX_W = 800;
 
 	function _getDom () {
 		dom.$ctrls = $('.shortcut-ctrl li');
@@ -87,6 +88,11 @@
 
     function resize () {
     	$('body').addClass('ofh');
+
+        if (window.innerWidth < 1024) {
+            return;
+        }
+
     	var h = Math.max(MIN_H, window.innerHeight);
     	dom.$hd.css({
     		height: h,
@@ -97,9 +103,11 @@
     		height: h,
     		overflow: 'auto',
     		webkitOverflowScrolling: 'touch',
-    		float: 'right',
     		width: (window.innerWidth*0.7 - 40)
     	});
+        dom.$con.find('.con-inner').css({
+            width: Math.min(850, dom.$con.width())
+        });
 
     	dom.$gallery.find('.gallery-scr').css({
     		width: dom.$gallery.width() - 20,
