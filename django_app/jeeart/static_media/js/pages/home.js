@@ -103,7 +103,7 @@
     		height: h,
     		overflow: 'auto',
     		webkitOverflowScrolling: 'touch',
-    		width: (window.innerWidth*0.7 - 40)
+    		width: (window.innerWidth*0.7 - (/dispic/.test(location.href) ? 0 : 40))
     	});
         dom.$con.find('.con-inner').css({
             width: Math.min(850, dom.$con.width())
