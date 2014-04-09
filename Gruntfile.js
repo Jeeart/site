@@ -70,7 +70,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                   "django_app/jeeart/static_media/css/page_home.css": "django_app/jeeart/static_media/less/page_home.less",
-                  "django_app/jeeart/static_media/css/page_blog.css": "django_app/jeeart/static_media/less/page_blog.less"
+                  "django_app/jeeart/static_media/css/page_blog.css": "django_app/jeeart/static_media/less/page_blog.less",
+                  "django_app/jeeart/static_media/css/page_dispic.css": "django_app/jeeart/static_media/less/page_dispic.less"
                 }
               }
         },

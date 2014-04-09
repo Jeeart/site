@@ -6,36 +6,91 @@
 {% endblock %}
 
 {% block nav %}
-<h1>DISPIC</h1>
-<a class="back2jee" href="/" >Jee</a>
+<div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo_03.png" /></a></div>
+<nav>
+    <ul id="nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/#about">我们</a></li>
+        <li><a href="/blog">博客</a></li>
+        <li class="current"><a href="/dispic">DISPIC</a></li>
+    </ul>
+</nav>
+<div class="ong-info">
+    Design your trust<br/>
+    &copy; ong
+</div>
 {% endblock %}
 
 {% block page_content %}
-<div id="dispic-content">
+<div id="content" clsss="dispic-con">
 	<div class="banner">
-		<img class="banner-img" alt="" src="{{MEDIA_URL}}images/dispic/banner.png" />
+		<img class="banner-img" alt="" src="{{MEDIA_URL}}images/dispic_02.jpg" />
 		<div class="banner-con">
-			<p class="text">喜欢dribbble或instagram并希望他们同时出现在Mac上？</p>
 			<a class="d-btn green" href="/dispic/download">立即下载</a>
 		</div>
 	</div>
 
-	<div class="intro">
-		<h2>简洁，易用的小工具</h2>
-		<p class="intro-con">Dispic 是一款运行在Mac上的app，它能方便的集合dribbble和instagram，如果你也是这两款应用的爱好者，试用一下Dispic，相信你会喜欢上它。</p>
+	<div class="story">
+		<h2>THE STORY</h2>
+		
         <p class="intro-img">
-            <img alt="" src="{{MEDIA_URL}}images/dispic/ig_db.png" />
+            <img alt="" src="{{MEDIA_URL}}images/dispic_05.jpg" />
         </p>
+        <div class="intro-con">
+        	<p>最早的构想在2011年，Jobs刚刚去世。</p>
+
+			<p>12月，从杭州到深圳的旅途中，我跟Eric开始闲聊说工作之余我们还需要再做点什么。</p>
+
+			<p>刚巧，吼吼告诉我他正在自学Mac开发，基于之前的合作，于是我们迅速达成一致：来开发一款Mac程序吧，因为真正去实现一个产品的过程往往是最有效的学习方法。作为一个非正式的团队，我们讨论这个产品的前提是：</p>
+
+			<p>1. 希望最初的产品形态能更轻一些，尽量能减少资金投入。<br/>
+				2. 这款程序是自己了解并能日常使用的产品。
+				</p>
+
+			<p>idea并未花费太长时间，作为设计师的我日常使用最多的产品是instagram和dribbble，如果能把两者结合起来做一个app会是什么样呢？于是Dispic就这么自然的诞生了。</p>
+
+			<p>从最初的想法到最终的开发实现我们用了足足两年时间，值得庆幸的是在这期间我们并非因为时间和物理距离的长度影响我们的完成的决心，甚至在这期间我跟工程师素未谋面 :P</p>
+
+			<p>2013年末，在成都一如既往的坏空气下，Dispic终于顺利的诞生了，跟许多初生的婴儿一样，它并不完美但是充满我们对它的深情。</p>
+
+			<p>PS：献给所有的设计师，业余摄影师以及喜欢自然的你。</p>
+        </div>
 	</div>
 
-	<div class="about">
-		<h2>关于&花絮</h2>
-		<p class="about-con">Dispic是Jee Studio的试验性产品之一，最初的想法萌生于2011年底，在不断的迭代与思考中，产品的最初想法和最终呈现相去甚远。Dispic由一个设计师及一个工程师用业余时间完成，过程中我们低估了Mac开发难度，在其中也遇到了颇多的困难，所幸的是我们坚持下来了并成功发布了第一个版本。<br/>
-			最初的版本中会有很多不如人意的地方，我们会尽可能的快的修改，也欢迎大家给我们意见。</p>
-		<div class="btn-wrapper">
-			<a class="d-btn blue" href="mailto:contact@jeeart.com">联系我们</a>
-			<a class="d-btn green" href="/dispic/download">免费下载</a>
+	<div class="team">
+		<h2>THE TEAM</h2>
+		<div class="team-wrapper">
+			<div class="member">
+				<img class="avatar" src="{{MEDIA_URL}}images/avatar_11.png" />
+				<p class="member-name">
+					<strong>强生</strong>
+					DESIGNER
+				</p>
+				<p class="member-intro">
+					喜欢设计，美食和旅行等一切设计师们喜欢的东西。也曾梦想着改变世界，现在更多的是希望能踏实的做好每一件小事。明年打算养一只宠物。
+				</p>
+			</div>
+
+			<div class="member">
+				<img class="avatar" src="{{MEDIA_URL}}images/avatar_13.png" />
+				<p class="member-name">
+					<strong>Jesse</strong>
+					ENGINEER
+				</p>
+				<p class="member-intro">
+					喜爱Coding，不曾奢望改变世界，只期望用程序的力量改变我们的生活
+				</p>
+			</div>
 		</div>
 	</div>
+
+	<div class="thanks">
+		<strong>THANKS</strong>
+		<p>From Chengdu & Hangzhou with love. Jee © 2013</p>
+	</div>
 </div>
+
+	<script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
+    <script src="{{MEDIA_URL}}js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js?t=130726"></script>
 {% endblock %}
