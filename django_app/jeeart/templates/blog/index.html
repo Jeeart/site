@@ -6,19 +6,23 @@
 {% endblock %}
 
 {% block nav %}
-<div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo.png" /></a></div>
+<div class="logo-wrapper"><a href="/" class="logo-link"><img alt="" src="{{MEDIA_URL}}images/logo_03.png" /></a></div>
 <nav>
     <ul id="nav">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/#about">ABOUT</a></li>
-        <li class="current"><a href="/blog">BLOG</a></li>
+        <li><a href="/">首页</a></li>
+        <li><a href="/#about">我们</a></li>
+        <li class="current"><a href="/blog">博客</a></li>
         <li><a href="/dispic">DISPIC</a></li>
     </ul>
 </nav>
+<div class="ong-info">
+    Design your trust<br/>
+    &copy; ong
+</div>
 {% endblock %}
 
 {% block page_content %}
-    <div id="blog-content">
+    <div id="content">
         <div id="posts">
             <ul class="posts-ul">
                 {% for blog in blog_list %}
@@ -36,4 +40,7 @@
             </ul>
         </div>
     </div>
+    <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>
+    <script src="{{MEDIA_URL}}js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/pages/home.js?t=130726"></script>
 {% endblock %}

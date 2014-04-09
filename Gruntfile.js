@@ -69,7 +69,8 @@ module.exports = function(grunt) {
                   cleancss: true
                 },
                 files: {
-                  "django_app/jeeart/static_media/css/page_home.css": "django_app/jeeart/static_media/less/page_home.less"
+                  "django_app/jeeart/static_media/css/page_home.css": "django_app/jeeart/static_media/less/page_home.less",
+                  "django_app/jeeart/static_media/css/page_blog.css": "django_app/jeeart/static_media/less/page_blog.less"
                 }
               }
         },

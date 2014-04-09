@@ -1,11 +1,17 @@
-#blog-content {
+#content {
     width: 820px;
-    margin: 0 auto;
+    //margin: 0 auto;
+    background: #333639;
+    border-left: 1px solid #222;
+    padding:20px;
     
     #posts {
+        padding: 30px;
+
         .posts-ul {
             li {
                 padding-top: 44px;
+                padding-bottom: 70px;
                 
                 .post-hd {
                     position: relative;
@@ -13,9 +19,11 @@
                 }
                 
                 h2 {
-                    font-size: 30px;
+                    font-size: 18px;
+                    color: #eee;
+                    line-height: 2;
                     a {
-                        color: #73B9FF;
+                        color: #eee;
                         &:hover {
                             color: #007FFF;
                         }
@@ -23,8 +31,10 @@
                 }
                 
                 .post-time {
-                    position: absolute;
+                    //position: absolute;
+                    display: block;
                     font-size: 13px;
+                    line-height: 2;
                     right: 0;
                     color: #BBBBBB;
                     bottom: 0;
@@ -32,11 +42,14 @@
                 
                 .post-con {
                     font-size: 14px;
-                    line-height: 1.6;
-                    color: #777;
+                    line-height: 1.8;
+                    color: #aaa;
                     
                     p {
                         margin-bottom: 16px;
+                    }
+                    img {
+                        max-width: 100%;
                     }
                 }
                 
