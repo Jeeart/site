@@ -2,5 +2,5 @@
 .DS_Store
 /.DS_Store
 /**/*.pyc
-
+*.db
 node_modules/
