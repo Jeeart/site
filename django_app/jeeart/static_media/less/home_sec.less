@@ -2,7 +2,7 @@
 #content {
     width: 820px;
     background: #333739;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     border-left: 1px solid #242628;
     float: left;
 }
@@ -282,7 +282,7 @@
 .partner {
     background: #2b2d30;
     padding: 50px 0 100px 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     h4 {
         width: 140px;
@@ -327,6 +327,47 @@
                 background-image: url(../images/partner_14.png);
             }
         }
+    }
+}
+
+.touch {
+    margin-bottom: 20px;
+    background: #2B2D30;
+    height: 118px;
+    color: #EDEDF4;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+
+    h4 {
+        float: left;
+        padding-left: 40px;
+        font-size: 20px;
+        line-height: 118px;
+        font-weight: 500;
+    }
+
+    .touch-link {
+        position: absolute;
+        width: 268px;
+        height: 42px;
+        right: 0;
+        top: 50%;
+        margin-top: -21px;
+
+        li {float: left; margin-right: 24px}        
+        li a {
+            display: block;
+            float: left;
+            width: 41px;
+            height: 41px;
+            background: url(../images/icon_03.png) no-repeat;
+        }
+
+        li.wechat a { background-position: 0 0; }
+        li.mail a {background-position: -65px 0;}
+        li.dribbble a {background-position: -130px 0;}
+        li.github a {background-position: -195px 0;}
     }
 }
 

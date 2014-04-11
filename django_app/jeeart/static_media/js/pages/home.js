@@ -1,6 +1,6 @@
 ;$(function () {
 	var dom = {};
-	var MIN_H = 520;
+	var MIN_H = 610;
     var MAX_W = 800;
 
 	function _getDom () {
@@ -89,25 +89,21 @@
     function resize () {
     	$('body').addClass('ofh');
 
-        if (window.innerWidth < 1024) {
-            return;
-        }
-
     	var h = Math.max(MIN_H, window.innerHeight);
     	dom.$hd.css({
     		height: h,
     		overflow: 'hidden',
-    		width: '29.9%'
+    		width: '400'
     	});
     	dom.$con.css({
     		height: h,
     		overflow: 'auto',
     		webkitOverflowScrolling: 'touch',
-    		width: (window.innerWidth*0.7 - (/dispic/.test(location.href) ? 0 : 40))
+    		width: (959 - (/dispic/.test(location.href) ? 0 : 40))
     	});
-        dom.$con.find('.con-inner').css({
-            width: Math.min(850, dom.$con.width())
-        });
+        // dom.$con.find('.con-inner').css({
+        //     width: Math.min(850, dom.$con.width())
+        // });
 
     	dom.$gallery.find('.gallery-scr').css({
     		width: dom.$gallery.width() - 20,
