@@ -22,6 +22,7 @@
 
 {% block page_content %}
     <div id="content">
+        <div class="con-inner">
         <div id="posts">
             <ul class="posts-ul">
                 {% for blog in blog_list %}
@@ -37,6 +38,22 @@
                 {% endfor %}    
 
             </ul>
+
+            <div class="page-ctrl">
+            {% if hasPrevPage %}
+                <a href="/blog/p/{{prevPageNum}}" class="prev-btn enable">上一页</a>
+            {% else %}
+                <a href="javascript:;" class="prev-btn">上一页</a>
+            {% endif %}
+
+            {% if hasNextPage %}
+                <a href="/blog/p/{{nextPageNum}}" class="next-btn enable">下一页</a>
+            {% else %}
+                <a href="javascript:;" class="next-btn">下一页</a>
+            {% endif %} 
+            </div>
+            
+        </div>
         </div>
     </div>
     <script src="{{MEDIA_URL}}js/jquery.flexslider-min.js"></script>

@@ -90,6 +90,8 @@
     	$('body').addClass('ofh');
 
     	var h = Math.max(MIN_H, window.innerHeight);
+        var isDispic = /dispic/.test(location.href);
+
     	dom.$hd.css({
     		height: h,
     		overflow: 'hidden',
@@ -99,11 +101,12 @@
     		height: h,
     		overflow: 'auto',
     		webkitOverflowScrolling: 'touch',
-    		width: (959 - (/dispic/.test(location.href) ? 0 : 40))
+    		//width: (959 - (/dispic/.test(location.href) ? 0 : 40))
+            width: (window.innerWidth - 401 - (isDispic ? 0 : 40))
     	});
-        // dom.$con.find('.con-inner').css({
-        //     width: Math.min(850, dom.$con.width())
-        // });
+        dom.$con.find('.con-inner').css({
+            width: (959 - (isDispic ? 0 : 40))
+        });
 
     	dom.$gallery.find('.gallery-scr').css({
     		width: dom.$gallery.width() - 20,
