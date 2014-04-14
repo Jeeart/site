@@ -50,7 +50,8 @@
 
 		$(window).on('resize', function () {
 			resize();
-		})
+		});
+
 
 	}
     
@@ -118,10 +119,6 @@
     	});
 
     	var galleryW = dom.$gallery.width();
-    	dom.$listVP.css({
-    		width: galleryW
-    	});
-    	_setupList();
 
     	dom.$list.find('ul').css({
     		width: galleryW
@@ -132,6 +129,12 @@
     	dom.$list.find('img').css({
     		width: '100%'
     	});
+        //console.log(dom.$listVP.find('img').width())
+        dom.$listVP.css({
+            width: galleryW,
+            height: (dom.$listVP.find('img').width()*180/240 + 40)*3 + 10
+        });
+        _setupList();
 
     	//resize left
     	var l = -(dom.$list.find('ul.current').index()*dom.$listVP.width());
